@@ -11,7 +11,7 @@ namespace NunitTestCalculator
         [TestCase(4, 5)]
         [TestCase(8, 2)]
         [TestCase(2, 9)]
-        public void TestAddMethodMultipleParameters(double num1, double num2)
+        public void VerifyAddMethodReturnsCorrectSumOfTwoNumbers(double num1, double num2)
         {
             //Arrange..set up the test
             CalculatorClass obj = new CalculatorClass();
@@ -25,7 +25,7 @@ namespace NunitTestCalculator
         [TestCase(4, 5)]
         [TestCase(8, 2)]
         [TestCase(2, 9)]
-        public void TestSubtractMethodMultipleParameters(double num1, double num2)
+        public void VerifySubtractMethodReturnsCorrectDifferenceOfTwoNumbers(double num1, double num2)
         {
             CalculatorClass obj2 = new CalculatorClass();
             double result = obj2.Subtract(num1, num2);
@@ -35,7 +35,7 @@ namespace NunitTestCalculator
         [TestCase(4, 5)]
         [TestCase(8, 2)]
         [TestCase(2, 9)]
-        public void TestMultiplyMethodMultipleParameters(double num1, double num2)
+        public void VerifyMultiplyMethodReturnsCorrectProductWithMultipleInputParameters(double num1, double num2)
         {
             CalculatorClass obj3 = new CalculatorClass();
             double result = obj3.Multiply(num1, num2);
@@ -45,17 +45,17 @@ namespace NunitTestCalculator
         [TestCase(50, 5)]
         [TestCase(8, 2)]
         [TestCase(27, 9)]
-        public void TestDivideMethodMultipleParameters(double num1, double num2)
+        public void VerifyDivideMethodReturnsCorrectDividendWithMultipleInputParameters(double num1, double num2)
         {
             CalculatorClass obj4 = new CalculatorClass();
             double result = obj4.Divide(num1, num2);
             Assert.That(result, Is.EqualTo(result));
         }
 
-        [TestCase(4, 5)]
-        [TestCase(8, 2)]
-        [TestCase(2, 9)]
-        public void TestNegativeNumbersMultipleParameters(double num1, double num2)
+        [TestCase(4, -5)]
+        [TestCase(-8, 2)]
+        [TestCase(-2, -9)]
+        public void VerifyNegativeNumbersReturnCorrectSumWithMultipleInputParameters(double num1, double num2)
         { 
             CalculatorClass obj5 = new CalculatorClass();
             double result = obj5.Add(num1, num2);
@@ -65,7 +65,7 @@ namespace NunitTestCalculator
         [TestCase(4.2, 5.6)]
         [TestCase(8.9, 2.3)]
         [TestCase(2.4, 9.7)]
-        public void TestNonIntegersMultipleParameters(double num1, double num2)
+        public void VerifyNonIntegersReturnCorrectSumWithMultipleInputParameters(double num1, double num2)
         {
             CalculatorClass obj6 = new CalculatorClass();
             double result = obj6.Add(num1,num2);
