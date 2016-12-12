@@ -35,7 +35,7 @@ namespace NunitTestCalculator
         [TestCase(4, 5)]
         [TestCase(8, 2)]
         [TestCase(2, 9)]
-        public void VerifyMultiplyMethodReturnsCorrectProductWithMultipleInputParameters(double num1, double num2)
+        public void VerifyMultiplyMethodReturnsCorrectProduct(double num1, double num2)
         {
             CalculatorClass obj3 = new CalculatorClass();
             double result = obj3.Multiply(num1, num2);
@@ -45,7 +45,7 @@ namespace NunitTestCalculator
         [TestCase(50, 5)]
         [TestCase(8, 2)]
         [TestCase(27, 9)]
-        public void VerifyDivideMethodReturnsCorrectDividendWithMultipleInputParameters(double num1, double num2)
+        public void VerifyDivideMethodReturnsCorrectDividend(double num1, double num2)
         {
             CalculatorClass obj4 = new CalculatorClass();
             double result = obj4.Divide(num1, num2);
@@ -55,7 +55,7 @@ namespace NunitTestCalculator
         [TestCase(4, -5)]
         [TestCase(-8, 2)]
         [TestCase(-2, -9)]
-        public void VerifyNegativeNumbersReturnCorrectSumWithMultipleInputParameters(double num1, double num2)
+        public void VerifyNegativeNumbersReturnCorrectSum(double num1, double num2)
         { 
             CalculatorClass obj5 = new CalculatorClass();
             double result = obj5.Add(num1, num2);
@@ -65,7 +65,7 @@ namespace NunitTestCalculator
         [TestCase(4.2, 5.6)]
         [TestCase(8.9, 2.3)]
         [TestCase(2.4, 9.7)]
-        public void VerifyNonIntegersReturnCorrectSumWithMultipleInputParameters(double num1, double num2)
+        public void VerifyDecimalNumbersReturnCorrectSum(double num1, double num2)
         {
             CalculatorClass obj6 = new CalculatorClass();
             double result = obj6.Add(num1,num2);
